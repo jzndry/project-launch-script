@@ -23,10 +23,10 @@ cd "{project_path}" || exit 1
 
 
 # 3. Open VS Code for the project directory
-echo "💻 Opening VS Code..."
+echo " Opening VS Code..."
 code .
 
-echo "✅ {project_name} is ready!"
+echo "{project_name} is ready!"
 """
 
 
@@ -103,7 +103,7 @@ def main():
     with open(target_file, "w") as f:
         f.write(script_content)
 
-    # 5. Make executable (chmod +x equivalent in Python)
+    # Make executable (chmod +x equivalent in Python)
     current_permissions = os.stat(target_file).st_mode
     os.chmod(target_file, current_permissions | stat.S_IXUSR | stat.S_IXGRP | stat.S_IXOTH)
 
